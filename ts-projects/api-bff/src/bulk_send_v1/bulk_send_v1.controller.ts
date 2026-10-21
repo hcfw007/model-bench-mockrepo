@@ -59,7 +59,7 @@ export class BroadcastOfficialController {
     }
   }
 
-  /** POST /api/broadcast-official/confirm */
+  /** POST /api/bulk-send-v1/confirm */
   async confirm(jobId: string, item: ConfirmItemDto) {
     if (!item.canConfirm) {
       return { status: 409, body: { message: item.denyReason } };
