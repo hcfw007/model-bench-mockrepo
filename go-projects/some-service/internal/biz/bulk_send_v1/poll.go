@@ -26,7 +26,7 @@ func (uc *UseCase) SyncJob(ctx context.Context, jobID string) error {
 	job.ResultSynced = true
 	job.UpdatedAt = time.UnixMilli(uc.clock.Now())
 
-	if job.SentCount > 0 {
+	if job.SentCount >= int32(len(job.Targets)) {
 		job.Status = JobStatusFinished
 	}
 	return uc.repo.Update(ctx, job)
