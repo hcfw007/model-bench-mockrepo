@@ -1,0 +1,37 @@
+{
+  "storyId": "7121982024",
+  "title": "群发1",
+  "archive": ".tasks/bulk-send-v1",
+  "env": {
+    "web": "https://test.example.com",
+    "region": "test-region",
+    "orgId": "650000000000000000000002",
+    "superAdminUserId": "650000000000000000000003",
+    "corpId": "ww0000000000000000"
+  },
+  "branches": [
+    {
+      "repo": "some-service",
+      "branch": "fix/bulk-send-v1-auto-confirm",
+      "closes": ["#20"],
+      "status": "merged"
+    },
+    {
+      "repo": "some-service",
+      "branch": "feat/bulk-send-v1-auto-tag",
+      "closes": ["#18"],
+      "status": "open"
+    },
+    {
+      "repo": "web-console",
+      "branch": "fix/confirm-list-hide-canceled",
+      "closes": ["#30"],
+      "status": "not-started"
+    }
+  ],
+  "notStarted": ["#31", "#33"],
+  "notes": [
+    "#31 未定性，禁止写修复提示词",
+    "#33 已判定非缺陷，不要重新提出"
+  ]
+}
